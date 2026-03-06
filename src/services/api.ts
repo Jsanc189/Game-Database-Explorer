@@ -12,7 +12,8 @@ export async function fetchGames(
   search: string = "",
   page: number = 1
 ) {
-  const API_KEY = import.meta.env.VITE_RAWG_KEY;
+  //const API_KEY = import.meta.env.VITE_RAWG_KEY;
+  const API_KEY = "27f3f642af0446d59adc513204b5234b";
 
   const response = await fetch(
     `${BASE_URL}/games?key=${API_KEY}&search=${search}&page=${page}`
