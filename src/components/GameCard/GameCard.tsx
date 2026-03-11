@@ -4,6 +4,8 @@ Date: 3/11/2026
 Description: This file defines the GameCard component, which is responsible for displaying individual game information in a card format.
 */
 
+import styles from "./GameCard.module.css";
+
 type GameCard = {
    id: number;
    name: string;
@@ -18,7 +20,7 @@ type Props = {
 
 export default function GameCard({ game }: Props) {
     return (
-        <div>
+        <div className={styles.gameCard}>
             <h2>{game.name}</h2>
             <img src={game.background_image} alt={game.name} />
             <p>Released: {game.released}</p>

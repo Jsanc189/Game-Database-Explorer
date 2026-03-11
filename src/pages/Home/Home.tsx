@@ -5,6 +5,7 @@ Description: This file defines the Home component, which serves as the main page
             It includes a search bar for users to search for games and displays a list of games based on the search query.
 */
 
+import styles from "./Home.module.css";
 import { useState } from "react";
 import useFetchGames from "../../hooks/userFetchGames";
 import GameCard from "../../components/GameCard/GameCard";
@@ -23,7 +24,7 @@ export default function Home() {
             {loading && <p>Loading...</p>}
             {error && <p>{error}</p>}
 
-            <div className="game-grid">
+            <div className={styles.gameGrid}>
                 {games.map((game) => (
                     <GameCard key={game.id} game={game} />
                 ))}
