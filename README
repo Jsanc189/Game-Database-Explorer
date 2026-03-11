@@ -1,0 +1,108 @@
+Game Database Explorer
+
+A web application that allows users to explore video game data using the RAWG video game database API. The project demonstrates building a modern frontend application using React, TypeScript, and REST APIs.
+
+The application fetches game data dynamically and renders it using reusable React components in a responsive interface.
+
+Live Demo
+
+https://jsanc189.github.io/Game-Database-Explorer/
+
+Features
+
+- Fetches real video game data from the RAWG REST API
+- Displays game information such as titles, ratings, and release dates
+- Dynamically renders game data using React components
+- Clean and modular component structure
+- Responsive layout for different screen sizes
+- Automatic deployment through GitHub Actions
+
+Technologies Used
+
+React
+
+- TypeScript
+- Vite
+- REST APIs
+- HTML5
+- CSS3
+- Git and GitHub
+
+API used:
+
+- RAWG Video Games Database API
+
+Deployment:
+
+- GitHub Pages
+
+Project Structure
+
+    Game-Database-Explorer
+    ├── src
+    │   ├── components
+    │   ├── services
+    │   ├── types
+    │   ├── App.tsx
+    │   └── main.tsx
+    │
+    ├── public
+    ├── index.html
+    ├── vite.config.ts
+    ├── package.json
+    └── .github
+        └── workflows
+            └── deploy.yml
+How It Works
+
+The application sends requests to the RAWG API.
+- Game data is returned in JSON format.
+- TypeScript interfaces define the structure of the API responses.
+- React components iterate through the data and render game cards.
+- The site is built with Vite and deployed automatically to GitHub Pages using a GitHub Actions workflow.
+
+Local Development
+
+Clone the repository:
+
+- git clone https://github.com/jsanc189/Game-Database-Explorer.git
+
+Navigate into the project:
+
+- cd Game-Database-Explorer
+
+Install dependencies:
+
+- npm install
+
+Run the development server:
+
+- npm run dev
+
+The site will be available at:
+
+- http://localhost:5173
+- Build for Production
+- npm run build
+
+This generates the production build in the dist directory.
+
+Deployment
+
+- The project deploys automatically using GitHub Actions when code is pushed to the main branch. The workflow builds the project and publishes the dist folder to GitHub Pages.
+
+Future Improvements
+
+- Filtering by genre or platform
+- Game detail pages
+- Infinite scrolling for large result sets
+- Improved UI styling and animations
+
+Author
+
+Jackie Sanchez
+
+Frontend developer with interests in game development, interactive applications, and web technologies.
+
+GitHub:
+https://github.com/jsanc189
