@@ -7,6 +7,8 @@ Description: This file defines the Home component, which serves as the main page
 
 import { useState } from "react";
 import useFetchGames from "../../hooks/userFetchGames";
+import GameCard from "../../components/GameCard/GameCard";
+import SearchBar from "../../components/SearchBar/SearchBar";
 
 export default function Home() {
     const [search, setSearch] = useState<string>("");
@@ -17,21 +19,15 @@ export default function Home() {
         <div>
             <h1>Game Explorer</h1>
 
-            <input 
-                type="text"
-                placeholder="Search for games..."
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-            />
-
+            <SearchBar onSearch={setSearch} />
             {loading && <p>Loading...</p>}
             {error && <p>{error}</p>}
 
-            <ul>
+            <div className="game-grid">
                 {games.map((game) => (
-                    <li key={game.id}>{game.name}</li>
+                    <GameCard key={game.id} game={game} />
                 ))}
-            </ul>
+            </div>
         </div>
     )
 }
