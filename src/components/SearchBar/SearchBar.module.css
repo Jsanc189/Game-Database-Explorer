@@ -1,0 +1,18 @@
+.searchBar:focus {
+  border-color: #07fdf5;
+  box-shadow: 0 0 6px rgba(7, 253, 245, 0.5);
+}
+.searchButton {
+  background-color: #C1E899;
+  color: #9A6735;
+  border: none;
+  width:200px;
+  padding: 10px 20px;
+  font-size: large;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-left: 10px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #9A6735;
+}

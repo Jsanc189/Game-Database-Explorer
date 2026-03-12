@@ -20,7 +20,7 @@ export default function Home() {
         <div>
             <h1>Game Explorer</h1>
 
-            <SearchBar onSearch={setSearch} />
+            <SearchBar className={styles.searchBar} onSearch={setSearch} />
             {loading && <p>Loading...</p>}
             {error && <p>{error}</p>}
 
