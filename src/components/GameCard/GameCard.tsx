@@ -5,6 +5,7 @@ Description: This file defines the GameCard component, which is responsible for 
 */
 
 import styles from "./GameCard.module.css";
+import { Link } from "react-router-dom";
 
 type GameCard = {
    id: number;
@@ -20,11 +21,13 @@ type Props = {
 
 export default function GameCard({ game }: Props) {
     return (
-        <div className={styles.gameCard}>
-            <h2>{game.name}</h2>
-            <img src={game.background_image} alt={game.name} />
-            <p>Released: {game.released}</p>
-            <p>Rating: {game.rating}</p>
-        </div>
+        <Link to={'/game/&{game.id}'}>
+            <div className={styles.gameCard}>
+                <h2>{game.name}</h2>
+                <img src={game.background_image} alt={game.name} />
+                <p>Released: {game.released}</p>
+                <p>Rating: {game.rating}</p>
+            </div>
+        </Link>
     )
 }
